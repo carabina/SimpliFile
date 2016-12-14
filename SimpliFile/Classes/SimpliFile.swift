@@ -260,57 +260,6 @@ public class FileWriter : File{
 
 
 
-//random Functions
-
-class Random{
-    
-    #if os(Linux)
-    private static var isInit:Bool = false;
-    
-    private static func initRandom(){
-        if(isInit == false){
-            isInit = true
-            srandom(UInt32(Date().timeIntervalSince1970))
-        }
-    }
-    
-    public static func randint(numberTo: Int) -> Int{
-        initRandom()
-        return random()%numberTo
-    }
-    
-    public static func rand() -> Double{
-        initRandom()
-        return Double(random())/Double(RAND_MAX)
-    }
-    #else
-    public static func randint(numberTo: Int) -> Int{
-        return Int(arc4random_uniform(UInt32(numberTo)))
-    }
-    
-    public static func rand() -> Double{
-        return Double(arc4random()) / Double(UINT32_MAX)
-    }
-    #endif
-    
-    public static func randint(numberFrom: Int, numberTo: Int) -> Int{
-        return randint(numberTo: numberTo - numberFrom) + numberFrom
-    }
-    
-    public static func randbool() -> Bool{
-        let random: Int =  randint(numberTo: 2)
-        if(random == 0){
-            return false
-        }
-        else{
-            return true
-        }
-    }
-}
-
-
-
-
 //String functions
 
 extension String {
