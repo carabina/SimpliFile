@@ -1,0 +1,6 @@
+use_frameworks!
+target 'SimpliFile_Tests' do
+  pod 'SimpliFile', :path => '../'
+  
+  
+end
