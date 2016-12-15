@@ -177,7 +177,14 @@ public class FileReader : File{
     }
     
     public func isEmptyFile() throws -> Bool{
-        let attr = try FileManager.default.attributesOfItem(atPath: file.path)
+        let attr:[FileAttributeKey : Any]
+        do{
+            attr = try FileManager.default.attributesOfItem(atPath: file.path)
+        }
+        catch{
+            throw FileError.FILE_READING_ERROR
+        }
+        
         return attr[FileAttributeKey.size] as! Int == 0
     }
     

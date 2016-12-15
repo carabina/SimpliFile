@@ -90,7 +90,7 @@ writer.flushAndClose()
 a FileError.FILE_READING_ERROR can be thrown when you read the file
 
 ```swift
-var isEmpty:Bool = reader.isEmptyFile())    //return true if the file is empty
+var isEmpty:Bool = try! reader.isEmptyFile())    //return true if the file is empty
 
 //With the following methods, a FileError.FILE_READING_ERROR can be thrown
 var string:String = try! reader.read()    //get all of the content of the file
