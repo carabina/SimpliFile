@@ -6,6 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/SimpliFile.svg?style=flat)](http://cocoapods.org/pods/SimpliFile)
 
 Two classes for Swift3 to read and write in files more easily (inspired of Java)
+
 It can be used in Ubuntu
 
 #Table of Contents
@@ -25,7 +26,7 @@ To use SimpliFile in your xcode project :
 * open your project with the .xcworkspace file
 
 To use SimpliFile in a commandline project (OSX or Ubuntu) :
-copy the source file on https://github.com/FlPe/SimpliFile
+* copy the source file on https://github.com/FlPe/SimpliFile
 
 
 ##Usage
