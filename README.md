@@ -107,25 +107,6 @@ ligne = try! reader.readLine()     //Reading by line
 SimpliFile is owned and maintained by [Fl Pe](fp051888@gmail.com)
 You can send him an email if you want to report a bug / talk to him about this module.
 
-
-##License
-
-Copyright (C) 2016 FlPe <fp051888@gmail.com>
-This software is provided 'as-is', without any express or implied warranty. 
-
-In no event will the author be held liable for any damages arising from the use of this software. 
-
-Permission is granted to anyone to use this software for any purpose,including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
-
-- The origin of this software must not be misrepresented; you must not claim that you wrote the original software.
-- Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
-- This notice may not be removed or altered from any source or binary distribution.
-
-
-## Author
-
-FlPe, fp051888@gmail.com
-
 ## License
 
 SimpliFile is available under the MIT license. See the LICENSE file for more info.
