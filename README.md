@@ -18,11 +18,11 @@ It can be used in Ubuntu
 ##Installation
 
 To use SimpliFile in your xcode project :
-*run "sudo gem install cocoapods"
-*run "pod init" in your project directory
-*add " pod ‘SimpliFile’ " in the Podfile
-*run "pod install"
-*open your project with the .xcworkspace file
+* run "sudo gem install cocoapods"
+* run "pod init" in your project directory
+* add " pod ‘SimpliFile’ " in the Podfile
+* run "pod install"
+* open your project with the .xcworkspace file
 
 To use SimpliFile in a commandline project (OSX or Ubuntu) :
 copy the source file on https://github.com/FlPe/SimpliFile
@@ -38,7 +38,9 @@ copy the source file on https://github.com/FlPe/SimpliFile
 #####Create the reader / the writer
 
 In the creation of a reader or a writer, a FileError.FILE_CREATION_ERROR can be thrown.
+
 When a FileReader or a FileWriter is creating with success, the file and all of the subdirectories are created if they don't exist.
+
 For the FileWriter, the append parameter specify if we append text to the file, or if we clear the file before writing.
 
 ```swift
@@ -48,6 +50,7 @@ import SimpliFile
 *Available for all platforms :
 
 The pathToDirectory parameter can be a absolute or a relative path.
+
 If we don't specify the pathToDirectory parameter, it will use the current directory
 
 ```swift
@@ -58,7 +61,9 @@ let reader: FileReader = try! FileReader(pathToDirectory: "../textFiles", fileNa
 *Available for OSX (not for Ubuntu) :
 
 The directory parameter can take all of the FileManager.SearchPathDirectory values (https://developer.apple.com/reference/foundation/filemanager.searchpathdirectory)
+
 The domainMask parameter can take all of the FileManager.SearchPathDomainMask values (https://developer.apple.com/reference/foundation/filemanager.searchpathdomainmask)
+
 The default value of domainMask is .userDomainMask
 
 ```swift
