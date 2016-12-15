@@ -185,7 +185,7 @@ public class FileReader : File{
             throw FileError.FILE_READING_ERROR
         }
         
-        return attr[FileAttributeKey.size] as! Int == 0
+        return (attr[FileAttributeKey.size] as! NSNumber).int8Value == 0
     }
     
     public func eof() ->Bool{
