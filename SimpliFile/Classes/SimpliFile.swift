@@ -176,16 +176,9 @@ public class FileReader : File{
         }
     }
     
-    public func isEmptyFile() -> Bool{
-        var fileContent : String?
-        
-        fileContent = try! String(contentsOf: file, encoding: String.Encoding.utf8)
-        
-        if(fileContent == nil || fileContent! == ""){
-            return true
-        }
-        
-        return false
+    public func isEmptyFile() throws -> Bool{
+        let attr = try FileManager.default.attributesOfItem(atPath: file.path)
+        return attr[FileAttributeKey.size] as! Int == 0
     }
     
     public func eof() ->Bool{
